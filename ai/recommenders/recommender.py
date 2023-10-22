@@ -41,9 +41,9 @@ bpr = cornac.models.BPR(
 )
 with Timer() as t:
     bpr.fit(train_set)
-print("Took {} seconds for training.".format(t))
 
-if {} < 2: 
+print("Took {} seconds for training.".format(t))
+if int(t.interval) < 2.5: 
     print("Your data looks like a perfect match for an active buyer request! Let's send it!")
 else:
     print("It doesn't look like your data is a good fit for active requests, we'll update you when you can send it!")
