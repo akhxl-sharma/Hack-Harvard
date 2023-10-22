@@ -655,7 +655,7 @@ class MockMovielensSchema(pa.SchemaModel):
         keep_genre_col: bool = False,
         tmp_path: Optional[str] = None,
     ):
-        """Return fake movielens dataset as a Spark Dataframe with specified rows
+        """Return terra dataset as a Spark Dataframe with specified rows
 
         Args:
             spark (SparkSession): spark session to load the dataframe into
