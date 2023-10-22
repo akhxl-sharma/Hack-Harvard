@@ -272,7 +272,6 @@ def auc(
     recommender, where rating is binary and prediction is float number ranging
     from 0 to 1.
 
-    https://en.wikipedia.org/wiki/Receiver_operating_characteristic#Area_under_the_curve
 
     Note:
         The evaluation does not require a leave-one-out scenario.
@@ -315,7 +314,6 @@ def logloss(
     recommender, where rating is binary and prediction is float number ranging
     from 0 to 1.
 
-    https://en.wikipedia.org/wiki/Loss_functions_for_classification#Cross_entropy_loss_(Log_Loss)
 
     Args:
         rating_true (pandas.DataFrame): True data
@@ -428,7 +426,6 @@ def precision_at_k(
     Note:
         We use the same formula to calculate precision@k as that in Spark.
         More details can be found at
-        http://spark.apache.org/docs/2.1.1/api/python/pyspark.mllib.html#pyspark.mllib.evaluation.RankingMetrics.precisionAt
         In particular, the maximum achievable precision may be < 1, if the number of items for a
         user in rating_pred is less than k.
 
@@ -529,7 +526,6 @@ def ndcg_at_k(
 ):
     """Normalized Discounted Cumulative Gain (nDCG).
 
-    Info: https://en.wikipedia.org/wiki/Discounted_cumulative_gain
 
     Args:
         rating_true (pandas.DataFrame): True DataFrame
@@ -625,13 +621,6 @@ def map_at_k(
     **kwargs
 ):
     """Mean Average Precision at k
-
-    The implementation of MAP is referenced from Spark MLlib evaluation metrics.
-    https://spark.apache.org/docs/2.3.0/mllib-evaluation-metrics.html#ranking-systems
-
-    A good reference can be found at:
-    http://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf
-
     Note:
         1. The evaluation function is named as 'MAP is at k' because the evaluation class takes top k items for
         the prediction items. The naming is different from Spark.
@@ -735,7 +724,6 @@ metrics = {
 
 def _get_rating_column(relevancy_method: str, **kwargs) -> str:
     r"""Helper utility to simplify the arguments of eval metrics
-    Attemtps to address https://github.com/microsoft/recommenders/issues/1737.
 
     Args:
         relevancy_method (str): method for determining relevancy ['top_k', 'by_threshold', None]. None means that the
