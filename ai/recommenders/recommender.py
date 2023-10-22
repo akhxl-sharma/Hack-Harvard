@@ -12,7 +12,7 @@ from recommenders.utils.timer import Timer
 from recommenders.utils.constants import SEED
 from recommenders.cornac.cornac_utils import predict_ranking
 from recommenders.evaluation.python_evaluation import map_at_k, ndcg_at_k, precision_at_k, recall_at_k
-
+import pickle 
 
 x = '100k'
 
