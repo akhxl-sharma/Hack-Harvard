@@ -41,4 +41,4 @@ bpr = cornac.models.BPR(
 )
 with Timer() as t:
     bpr.fit(train_set)
-print("Took {} seconds for training.".format(t))
+print("Took {} seconds for training.".format(t)"\n The data you have is a perfect match for a client request ")
